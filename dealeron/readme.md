@@ -12,10 +12,11 @@ The top-level script is rove.js (receiving user input, initializing Mars and dep
 
 I added unit tests (runnable via jest, see below) for both classes with fairly complete test cases (positive and negative).
 
-Some design decisions I've made for this project:
+Some design decisions / assumptions I've made for this project:
+* Map boundaries block rover movement (instead of throwing errors or anything else)
 * Validating inputs (commands, positions, etc.) and using default values / no-ops instead of throwing errors and failing completely on invalid input
     * This can be easily changed by just throwing an error in the code blocks of the ifs inside of both constructors
-* Rovers phase through each other and do not block movement
+* Rovers drive near each other on the same tile and do not block movement
     * This can be changed fairly easy by modifying Rover.js to keep track of where all other rovers are and checking to make sure the new spot to move to isn't on top of an already-existing rover (or keeping a 2-dimensional representation of the map within Mars.js, and asking Mars if a spot is empty or not)
 * Rovers can be deployed on the same tile as another rover
     * This doesn't have a quick-and-easy solution, if it needs to change. Does the script just fail? Does the script try to find an adjacent spot that's empty and launch the rover anyways (and what if there are no more empty spots 'nearby', or anywhere at all?) 
