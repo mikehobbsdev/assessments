@@ -14,11 +14,11 @@ I added unit tests (runnable via jest, see below) for both classes with fairly c
 
 Some design decisions I've made for this project:
 * Validating inputs (commands, positions, etc.) and using default values / no-ops instead of throwing errors and failing completely on invalid input
-** This can be easily changed by just throwing an error in the code blocks of the ifs inside of both constructors
+    * This can be easily changed by just throwing an error in the code blocks of the ifs inside of both constructors
 * Rovers phase through each other and do not block movement
-** This can be changed fairly easy by modifying Rover.js to keep track of where all other rovers are and checking to make sure the new spot to move to isn't on top of an already-existing rover (or keeping a 2-dimensional representation of the map within Mars.js, and asking Mars if a spot is empty or not)
+    * This can be changed fairly easy by modifying Rover.js to keep track of where all other rovers are and checking to make sure the new spot to move to isn't on top of an already-existing rover (or keeping a 2-dimensional representation of the map within Mars.js, and asking Mars if a spot is empty or not)
 * Rovers can be deployed on the same tile as another rover
-** This doesn't have a quick-and-easy solution, if it needs to change. Does the script just fail? Does the script try to find an adjacent spot that's empty and launch the rover anyways (and what if there are no more empty spots 'nearby', or anywhere at all?) 
+    * This doesn't have a quick-and-easy solution, if it needs to change. Does the script just fail? Does the script try to find an adjacent spot that's empty and launch the rover anyways (and what if there are no more empty spots 'nearby', or anywhere at all?) 
 
 ## How To Run
 
