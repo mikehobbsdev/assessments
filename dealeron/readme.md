@@ -25,7 +25,7 @@ Some design decisions / assumptions I've made for this project:
 
 From the base directory:
 
-    nvm use         // Swap to node 16.15.0
-    npm i           // Install modules
-    npx jest        // Run unit tests, 2 suites pass
-    node rove.js    // Run the script itself
+    nvm use 16.15.0   // Swap to node 16.15.0
+    npm i             // Install modules
+    npx jest          // Run unit tests, 2 suites pass
+    node rove.js      // Run the script itself
